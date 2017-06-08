@@ -43,7 +43,7 @@ namespace Module12_01.Controllers
         }
 
         // PUT: api/Course/5
-        public void Put(int id, [FromBody]Course course)
+        public void Put([FromBody]Course course)
         {
             var item = courses.Find(c => c.Id == course.Id);
             item.Name = course.Name;
